@@ -14,7 +14,7 @@ import axios from "axios";
 const {
   DISCORD_TOKEN,
   DISCORD_CLIENT_ID,
-  APTIQ_BACKEND_URL_BOT,   // <— NEU!
+  APTIQ_BACKEND_URL,   // <— NEU!
   APTIQ_BOT_EMAIL,
   APTIQ_BOT_PASSWORD
 } = process.env;
@@ -26,7 +26,7 @@ let aptiqToken = null;
 // =========================================================
 async function loginToAptiQ() {
   try {
-    const res = await axios.post(`${APTIQ_BACKEND_URL_BOT}/login`, {
+    const res = await axios.post(`${APTIQ_BACKEND_URL}/login`, {
       email: APTIQ_BOT_EMAIL,
       password: APTIQ_BOT_PASSWORD
     });
