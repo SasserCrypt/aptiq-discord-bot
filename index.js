@@ -185,3 +185,5 @@ client.on(Events.MessageCreate, async (message) => {
 // BOT STARTEN
 // =========================================================
 client.login(DISCORD_TOKEN);
+import http from "http";
+http.createServer((req, res) => res.end("AptiQ Discord Bot OK")).listen(process.env.PORT || 3000);
