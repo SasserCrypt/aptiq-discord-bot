@@ -48,7 +48,7 @@ async function callAptiQ(prompt) {
 
   try {
     const res = await axios.post(
-      `${APTIQ_BACKEND_URL_BOT}/message`,
+      `${APTIQ_BACKEND_URL}/message`,
       { content: prompt },
       { headers: { Authorization: `Bearer ${aptiqToken}` } }
     );
